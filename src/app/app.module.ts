@@ -8,9 +8,10 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatdialogComponent } from './matdialog/matdialog.component';
+import {MatStepperModule} from '@angular/material/stepper';
 import {PopupComponent} from './popup/popup.component';
-import { ChildComponent } from './child/child.component';
-import { FormComponent } from './form/form.component'
+import { FormComponent } from './form/form.component';
+import { StepperComponent } from './material/stepper/stepper.component'
 
 
 @NgModule({
@@ -18,14 +19,15 @@ import { FormComponent } from './form/form.component'
     AppComponent,
     MatdialogComponent,
     PopupComponent,
-    ChildComponent,
-    FormComponent
+    FormComponent,
+    StepperComponent
      ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MatButtonModule,
+    MatStepperModule,
     MatDialogModule,
     MatFormFieldModule,
     ReactiveFormsModule,
