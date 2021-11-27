@@ -7,6 +7,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
   styleUrls: ['./form.component.scss']
 })
 export class FormComponent implements OnInit {
+  number:number = 0;
   form: FormGroup;
   constructor(private fb: FormBuilder) { 
     this.form  = this.fb.group({
@@ -19,5 +20,10 @@ export class FormComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
+increament(){
+  this.number++;
+}
+decreament(){
+  this.number--;
+}
 }

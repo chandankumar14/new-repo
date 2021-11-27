@@ -11,7 +11,10 @@ import { MatdialogComponent } from './matdialog/matdialog.component';
 import {MatStepperModule} from '@angular/material/stepper';
 import {PopupComponent} from './popup/popup.component';
 import { FormComponent } from './form/form.component';
-import { StepperComponent } from './material/stepper/stepper.component'
+import { StepperComponent } from './material/stepper/stepper.component';
+import { MeenalTaskComponent } from './meenal-task/meenal-task.component'
+import { HttpClientModule } from '@angular/common/http';
+
 
 
 @NgModule({
@@ -20,7 +23,8 @@ import { StepperComponent } from './material/stepper/stepper.component'
     MatdialogComponent,
     PopupComponent,
     FormComponent,
-    StepperComponent
+    StepperComponent,
+    MeenalTaskComponent
      ],
   imports: [
     BrowserModule,
@@ -31,7 +35,8 @@ import { StepperComponent } from './material/stepper/stepper.component'
     MatDialogModule,
     MatFormFieldModule,
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
