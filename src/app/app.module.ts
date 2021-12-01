@@ -14,6 +14,7 @@ import { FormComponent } from './form/form.component';
 import { StepperComponent } from './material/stepper/stepper.component';
 import { MeenalTaskComponent } from './meenal-task/meenal-task.component'
 import { HttpClientModule } from '@angular/common/http';
+import { MeenalDemoComponent } from './meenal-demo/meenal-demo.component';
 
 
 
@@ -24,7 +25,8 @@ import { HttpClientModule } from '@angular/common/http';
     PopupComponent,
     FormComponent,
     StepperComponent,
-    MeenalTaskComponent
+    MeenalTaskComponent,
+    MeenalDemoComponent
      ],
   imports: [
     BrowserModule,

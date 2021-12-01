@@ -9,6 +9,8 @@ export class MeenalTasksService {
 
 // Define API
 apiURL = 'http://34.218.20.24:5001/eolreturnmanagement/mapdata?offset=0&limit=5';
+completeAPI = "http://34.218.20.24:5001/eolreturnmanagement/completedsteps?productreturnid";
+futureAPI ="http://34.218.20.24:5001/eolreturnmanagement/futuresteps?productreturnid"
 
   constructor(private _http: HttpClient) { 
   }
@@ -21,5 +23,12 @@ apiURL = 'http://34.218.20.24:5001/eolreturnmanagement/mapdata?offset=0&limit=5'
 getList(){
   return this._http.get(this.apiURL)
 }
-
+// this is completed api
+getCompleted(productId:number){
+return this._http.get(`${this.completeAPI}=${productId}`)
+}
+// this is future Api
+getFuture(productIds:number){
+return this._http.get(`${this.futureAPI}=${productIds}`)
+}
 }
