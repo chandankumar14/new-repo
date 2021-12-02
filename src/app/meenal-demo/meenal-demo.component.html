@@ -1,1 +1,10 @@
-<p>meenal-demo works!</p>
+
+<div class="status">
+    <div class="step1to3" *nfFor = "let stp1to3 of letStet1to3">
+        <div class="finalStatus">{{stp1to3.ReturnStatusDisplay}}</div>
+        <div class="finalStatus">{{stp1to3.ReturnStatusDTM}}</div>
+    </div>
+    <div class="step4to7" *ngFor = "let stp4to7 of step4to7">
+        <div class="finalStatus"> {{stp4to7.ReturnStatusDisplay}}</div>
+    </div>
+</div>

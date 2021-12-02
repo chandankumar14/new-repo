@@ -8,55 +8,39 @@ import { MeenalTasksService } from '../meenal-tasks.service';
 })
 export class MeenalDemoComponent implements OnInit {
   commonId: number = 1400
+  letStet1to3:any[] = []
+  step4to7:any[]= []
+  finalObj ={}
   constructor(private _services: MeenalTasksService) { }
-
   ngOnInit(): void {
     this.finalfunctions()
+    console.log(this.letStet1to3)
+    console.log(this.step4to7)
   }
 
 
   finalfunctions() {
-    let payload = {
-      ProductName: "",
-      ProductID: "",
-      ProductSerialNumber: "",
-      ServiceProviderName: "",
-      ServiceProviderCity: "",
-      ProductReturnID: "",
-      ReturnStatusID: "",
-      ReturnStatusDisplay: ""
-    }
-    // complete API data is here------>
-    this._services.getCompleted(this.commonId).subscribe((item1: any) => {
-      item1.data.map((item: any) => {
-        // this is for seperate
-        // 
-        let payloads = {
-          ProductName: item[4],
-          ProductID: item[1],
-          ProductSerialNumber: item[2],
-          ServiceProviderName: item[5],
-          ServiceProviderCity: item[6]
+    this._services.getCompleted(this.commonId).subscribe((resc:any)=>{
+      resc.data.map((item:any)=>{
+        let payload = {
+          ReturnStatusDisplay:item[13],
+          ReturnStatusDTM:item[14]
         }
-        // this payload for both api data
-        payload.ProductID = item[4];
-        payload.ProductName = item[1],
-          payload.ProductSerialNumber = item[2],
-          payload.ServiceProviderCity = item[5],
-          payload.ServiceProviderName = item[6]
-        /// this.productList.push(payload)
+        this.letStet1to3.push(payload)
+      
       })
 
     })
-    // future Api data ---->
-    this._services.getFuture(this.commonId).subscribe((res: any) => {
-      res.data.map((items2: any) => {
-        payload.ProductReturnID = items2[0],
-          payload.ReturnStatusID = items2[1],
-          payload.ReturnStatusDisplay = items2[2]
+
+    this._services.getFuture(this.commonId).subscribe((resf:any)=>{
+      resf.data.map((item2:any)=>{
+        let payload4t7={
+          ReturnStatusDisplay:item2[2]
+        }
+        this.step4to7.push(payload4t7)
       })
     })
-console.log(payload)
+
   }
 }
 
