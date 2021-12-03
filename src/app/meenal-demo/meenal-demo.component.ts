@@ -24,7 +24,6 @@ export class MeenalDemoComponent implements OnInit {
           ReturnStatusDisplayC: item[13],
           ReturnStatusDTM: item[14],
           ReturnStatusDisplayF: "",
-          
         }
         this.letStep1to7.push(payload)
       })
