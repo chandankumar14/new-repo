@@ -11,6 +11,11 @@ export class MeenalDemoComponent implements OnInit {
   letStep1to7: any[] = []
   ImageList:any["."] | undefined
   constructor(private _services: MeenalTasksService) { }
+  step1:string | undefined ="";
+result={
+  name: "",
+pqr:""
+} 
   ngOnInit(): void {
     this.finalfunctions()
     console.log(this.letStep1to7)
@@ -20,12 +25,14 @@ export class MeenalDemoComponent implements OnInit {
   finalfunctions() {
     this._services.getCompleted(this.commonId).subscribe((resc: any) => {
       resc.data.map((item: any) => {
-        let payload = {
-          ReturnStatusDisplayC: item[13],
-          ReturnStatusDTM: item[14],
-          ReturnStatusDisplayF: "",
-        }
-        this.letStep1to7.push(payload)
+        // let payload = {
+        //   ReturnStatusDisplayC: item[13],
+        //   ReturnStatusDTM: item[14],
+        //   ReturnStatusDisplayF: "",
+        // }
+        // this.letStep1to7.push(payload)
+        this.result.name = item[3]
+        this.result.pqr= item[3]
       })
     })
 
@@ -40,6 +47,10 @@ export class MeenalDemoComponent implements OnInit {
       })
     })
 
+  }
+  /// computated ()
+  computed(){
+this._services.computated(45,"xyz").sub(())
   }
 }
 

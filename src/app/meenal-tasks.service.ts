@@ -11,6 +11,7 @@ export class MeenalTasksService {
 apiURL = 'http://34.218.20.24:5001/eolreturnmanagement/mapdata?offset=0&limit=5';
 completeAPI = "http://34.218.20.24:5001/eolreturnmanagement/completedsteps?productreturnid";
 futureAPI ="http://34.218.20.24:5001/eolreturnmanagement/futuresteps?productreturnid"
+computatedAPI ="http://34.218.20.24:5001/eolreturnmanagement/computebestdecisionwhatifscenario?productreturnid"
 
   constructor(private _http: HttpClient) { 
   }
@@ -31,4 +32,8 @@ return this._http.get(`${this.completeAPI}=${productId}`)
 getFuture(productIds:number){
 return this._http.get(`${this.futureAPI}=${productIds}`)
 }
+computated(productreturnid:number, step2:string, ){
+this._http.get(`${this.computatedAPI}=${productreturnid}&packsoh=${step2}`)
+}
+
 }
