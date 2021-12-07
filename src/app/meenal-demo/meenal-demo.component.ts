@@ -9,9 +9,18 @@ import { MeenalTasksService } from '../meenal-tasks.service';
 export class MeenalDemoComponent implements OnInit {
   commonId: number = 1400
   letStep1to7: any[] = []
+  completed:any[] = []
+future:any[] =[]
+
   ImageList:any["."] | undefined
+  // step no ---1
+  img1:string = "assets/ACATE-2692.PNG"
+  img2:string =""
+  completdimg:any[] = [this.img1]
+  // step no ---2
   constructor(private _services: MeenalTasksService) { }
   step1:string | undefined ="";
+
 result={
   name: "",
 pqr:""
@@ -24,15 +33,15 @@ pqr:""
 
   finalfunctions() {
     this._services.getCompleted(this.commonId).subscribe((resc: any) => {
-      resc.data.map((item: any) => {
-        // let payload = {
-        //   ReturnStatusDisplayC: item[13],
-        //   ReturnStatusDTM: item[14],
-        //   ReturnStatusDisplayF: "",
-        // }
-        // this.letStep1to7.push(payload)
-        this.result.name = item[3]
-        this.result.pqr= item[3]
+      resc.data.map((item: any, index:any, arr:any) => {
+        let payload = {
+          ReturnStatusDisplayC: item[13],
+          ReturnStatusDTM: item[14],
+          ReturnStatusDisplayF: "",
+          img:this.completdimg[index]
+        }
+        this.letStep1to7.push(payload)
+       
       })
     })
 
@@ -48,10 +57,7 @@ pqr:""
     })
 
   }
-  /// computated ()
-  computed(){
-this._services.computated(45,"xyz").sub(())
-  }
+ 
 }
 
 
