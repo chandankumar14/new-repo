@@ -1,8 +1,9 @@
+<h1> testing area</h1>
 
 
-<h1>demo </h1>
-<div *ngFor = "let status of letStep1to7" >
-    <p>{{status?.ReturnStatusDisplayC}}</p>
-    <img src={{status.img}} alt="">
-    <p></p>
-</div>
+    <div *ngFor = "let question of questionLenth">
+        <app-reuse [formInput]="form" [formdata]= "question"> </app-reuse>
+    </div>
+    
+
+

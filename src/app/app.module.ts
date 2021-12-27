@@ -15,7 +15,8 @@ import { StepperComponent } from './material/stepper/stepper.component';
 import { MeenalTaskComponent } from './meenal-task/meenal-task.component'
 import { HttpClientModule } from '@angular/common/http';
 import { MeenalDemoComponent } from './meenal-demo/meenal-demo.component';
-
+import {MatDatepickerModule} from '@angular/material/datepicker';
+import { ReuseComponent } from './reuse/reuse.component';
 
 
 @NgModule({
@@ -26,7 +27,8 @@ import { MeenalDemoComponent } from './meenal-demo/meenal-demo.component';
     FormComponent,
     StepperComponent,
     MeenalTaskComponent,
-    MeenalDemoComponent
+    MeenalDemoComponent,
+    ReuseComponent
      ],
   imports: [
     BrowserModule,
@@ -38,7 +40,8 @@ import { MeenalDemoComponent } from './meenal-demo/meenal-demo.component';
     MatFormFieldModule,
     ReactiveFormsModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    MatDatepickerModule
   ],
   providers: [],
   bootstrap: [AppComponent]
