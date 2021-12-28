@@ -1,9 +1,9 @@
 <h1> testing area</h1>
 
 
-    <div *ngFor = "let question of questionLenth">
-        <app-reuse [formInput]="form" [formdata]= "question"> </app-reuse>
+    <div *ngFor = "let safetyControles of safetyFormArray">
+        <app-reuse [formInput]="safetyControles"></app-reuse>
     </div>
     
 
-
+<button (click) = "submit()">submitData</button>

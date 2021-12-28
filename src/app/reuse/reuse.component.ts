@@ -8,16 +8,14 @@ import { FormGroup } from '@angular/forms';
 })
 export class ReuseComponent implements OnInit {
 
-@Input () formdata:any 
+
 @Input() formInput:FormGroup | undefined
   constructor() { 
    
   }
 
   ngOnInit(): void {
-    console.log(this.formInput)
-    console.log(this.formdata)
-    
+   
   }
 
 }
