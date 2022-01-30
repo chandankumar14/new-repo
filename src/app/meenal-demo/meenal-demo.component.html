@@ -1,5 +1,13 @@
 <h1> testing area</h1>
-
+<section>
+    <div>
+      <button mat-button>Basic</button>
+      <button mat-button color="primary" (click) ="save(data)" >Tab1</button>
+      <button mat-button color="primary"(click) ="save(data)" >Tab2</button>
+      <button mat-button color="accent" (click) ="save(data)">Tab3</button>
+      
+     </div>
+  </section>
 
     <div *ngFor = "let safetyControles of safetyFormArray">
         <app-reuse [formInput]="safetyControles"></app-reuse>

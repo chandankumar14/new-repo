@@ -12,6 +12,10 @@ export class MeenalDemoComponent implements OnInit {
 
   form: FormGroup
   safetyFormArray: FormGroup[] = []
+  status:string = "safety"
+  tab1:string ="tab3"
+  tab2:string ="tab3"
+  tab3:string ="tab3"
   final:any[] =[]
   privacyFormArray: FormGroup[] = []
   questionLenth: any[] = [
@@ -65,15 +69,7 @@ export class MeenalDemoComponent implements OnInit {
     
   }
   submit() {
-    this.safetyFormArray.map(sfty=>{
-      const payload ={
-        question:sfty.get('question')?.value,
-        option1:sfty.get('option1')?.value,
-        option2:sfty.get('Option2')?.value,
-        option3:sfty.get('option3')?.value
-      }
-      this.final.push(payload)
-    })
+    
     
     console.log(this.final)
   }
@@ -105,6 +101,20 @@ export class MeenalDemoComponent implements OnInit {
     })
   }
 
+  save(data:any){
+    if(this.status==data){
+      this.safetyFormArray.map(sfty=>{
+        const payload ={
+          question:sfty.get('question')?.value,
+          option1:sfty.get('option1')?.value,
+          option2:sfty.get('Option2')?.value,
+          option3:sfty.get('option3')?.value
+        }
+        this.final.push(payload)
+      })
+    }
+
+  }
 }
 
 
