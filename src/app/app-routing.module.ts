@@ -1,15 +1,25 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { from } from 'rxjs';
-import { FormComponent } from './form/form.component';
-import { MatdialogComponent } from './matdialog/matdialog.component';
-import { StepperComponent } from './material/stepper/stepper.component';
-import { MeenalDemoComponent } from './meenal-demo/meenal-demo.component';
-import { MeenalTaskComponent } from './meenal-task/meenal-task.component';
+import { FormComponent } from './Angular_Form/Form_Component/form/form.component';
+import { ReactiveFormComponent } from './Angular_Form/Form_Component/reactive-form/reactive-form.component';
+import { TemplateDrivenFormComponent } from './Angular_Form/Form_Component/template-driven-form/template-driven-form.component';
+import { FromAndMapComponent } from './Rxjs/Rxjs_Operators/from-and-map/from-and-map.component';
+import { ListComponent } from './Rxjs/Rxjs_Operators/list/list.component';
 
 const routes: Routes = [
-  {path:"dialog", component:MatdialogComponent},
-  {path :"meenal-task", component:MeenalDemoComponent}
+  {
+    path: "Angular_form", children: [
+      { path: "", component: FormComponent },
+      { path: "Reactive_form", component: ReactiveFormComponent },
+      { path: "Template_drive_form", component: TemplateDrivenFormComponent },
+    ]
+  },
+  {
+    path: "Rxjs_Obseravale", children: [
+      { path: "", component: ListComponent },
+      { path: "from_map", component: FromAndMapComponent }
+    ]
+  }
 ];
 
 @NgModule({

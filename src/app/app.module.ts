@@ -1,55 +1,38 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import {MatDialogModule } from '@angular/material/dialog';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import {MatButtonModule} from '@angular/material/button';
+import { FormsModule } from '@angular/forms';
 import {MatFormFieldModule} from '@angular/material/form-field';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { MatdialogComponent } from './matdialog/matdialog.component';
-import {MatStepperModule} from '@angular/material/stepper';
-import {PopupComponent} from './popup/popup.component';
-import { FormComponent } from './form/form.component';
-import { StepperComponent } from './material/stepper/stepper.component';
-import { MeenalTaskComponent } from './meenal-task/meenal-task.component'
 import { HttpClientModule } from '@angular/common/http';
-import { MeenalDemoComponent } from './meenal-demo/meenal-demo.component';
-import {MatDatepickerModule} from '@angular/material/datepicker';
-import { ReuseComponent } from './reuse/reuse.component';
+import {MatButtonModule} from '@angular/material/button';;
+import { FormComponent } from './Angular_Form/Form_Component/form/form.component';
 import { ReactiveFormComponent } from './Angular_Form/Form_Component/reactive-form/reactive-form.component';
 import { TemplateDrivenFormComponent } from './Angular_Form/Form_Component/template-driven-form/template-driven-form.component';
-import { FirstComponentComponent } from './Component_communication/first-component/first-component.component';
-import { SecondComponentComponent } from './Component_communication/second-component/second-component.component';
-
+import { ListComponent } from './Rxjs/Rxjs_Operators/list/list.component';
+import { FromAndMapComponent } from './Rxjs/Rxjs_Operators/from-and-map/from-and-map.component';
+import {MatInputModule} from '@angular/material/input';
 
 @NgModule({
   declarations: [
     AppComponent,
-    MatdialogComponent,
-    PopupComponent,
     FormComponent,
-    StepperComponent,
-    MeenalTaskComponent,
-    MeenalDemoComponent,
-    ReuseComponent,
     ReactiveFormComponent,
     TemplateDrivenFormComponent,
-    FirstComponentComponent,
-    SecondComponentComponent
+    ListComponent,
+    FromAndMapComponent,
+   
      ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MatButtonModule,
-    MatStepperModule,
-    MatDialogModule,
-    MatFormFieldModule,
-    ReactiveFormsModule,
     FormsModule,
+    MatFormFieldModule,
+    MatInputModule,
     HttpClientModule,
-    MatDatepickerModule
+    MatButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]

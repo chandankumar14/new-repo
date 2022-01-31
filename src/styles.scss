@@ -2,3 +2,43 @@
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+// new css 
+.display_card{
+    width: 360px;
+    height: 230px;
+    margin: 15px;
+    display: inline-block;
+    vertical-align: top;
+    border-radius: 5px;
+    border: 1px solid;
+    border-color: #a455a4;
+    background-color: rgb(223, 230, 235);
+}
+.card_content{
+    font-size: 14px;
+    margin-top: 10px;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+
+}
+.card_title{
+    font-size: 18px;
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+}
+
+.display_flex{
+    width: 40%;
+    margin: 15px;
+   display: inline-block;
+  .inpt_field{
+      width: 100%;
+} 
+.inpt_title{
+    font-size: 18px;
+    font-family: 'Times New Roman', Times, serif;
+    padding-left: 10px;
+    color: darkblue;
+} 
+}
