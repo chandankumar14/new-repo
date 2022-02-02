@@ -5,6 +5,7 @@ import { ReactiveFormComponent } from './Angular_Form/Form_Component/reactive-fo
 import { TemplateDrivenFormComponent } from './Angular_Form/Form_Component/template-driven-form/template-driven-form.component';
 import { FromAndMapComponent } from './Rxjs/Rxjs_Operators/from-and-map/from-and-map.component';
 import { ListComponent } from './Rxjs/Rxjs_Operators/list/list.component';
+import { OFOperatorsComponent } from './Rxjs/Rxjs_Operators/of-operators/of-operators.component';
 
 const routes: Routes = [
   {
@@ -17,7 +18,8 @@ const routes: Routes = [
   {
     path: "Rxjs_Obseravale", children: [
       { path: "", component: ListComponent },
-      { path: "from_map", component: FromAndMapComponent }
+      { path: "from_map", component: FromAndMapComponent },
+      { path: "Of_operators", component: OFOperatorsComponent }
     ]
   }
 ];

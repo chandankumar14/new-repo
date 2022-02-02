@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  apiUrl: 'http://localhost:3000',
+  baseUrl: 'http://localhost:3000',
   roles: {
     user: 'ROLE_USER',
     moderator: 'ROLE_MODERATOR',

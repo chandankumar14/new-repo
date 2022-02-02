@@ -13,6 +13,7 @@ import { TemplateDrivenFormComponent } from './Angular_Form/Form_Component/templ
 import { ListComponent } from './Rxjs/Rxjs_Operators/list/list.component';
 import { FromAndMapComponent } from './Rxjs/Rxjs_Operators/from-and-map/from-and-map.component';
 import {MatInputModule} from '@angular/material/input';
+import { OFOperatorsComponent } from './Rxjs/Rxjs_Operators/of-operators/of-operators.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import {MatInputModule} from '@angular/material/input';
     TemplateDrivenFormComponent,
     ListComponent,
     FromAndMapComponent,
+    OFOperatorsComponent,
    
      ],
   imports: [

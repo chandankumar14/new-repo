@@ -1,0 +1,74 @@
+{
+    "profile": [
+        {   "id": 0,
+            "name": "Ankit",
+            "role": "Full_Stack_Developer",
+            "experience": "5yr",
+            "email": "adam.carter@unilogic.com",
+            "address": [
+                {
+                    "current_address": "Dehradun"
+                }
+            ]
+        },
+        {   "id": 1,
+            "name": "Aniket",
+            "role": "UI_Developer",
+            "email": "adam.carter@unilogic.com",
+            "experience": "2yr",
+            "address": [
+                {
+                    "current_address": "Dehradun"
+                }
+            ]
+        },
+        {   "id": 2,
+            "name": "Akash",
+            "role": "BE_Developer",
+            "email": "adam.carter@unilogic.com",
+            "experience": "0.5yr",
+            "address": [
+                {
+                    "current_address": "Dehradun"
+                }
+            ]
+        },
+        {   "id": 3,
+            "name": "Ramesh",
+            "role": "Java_Developer",
+            "email": "adam.carter@unilogic.com",
+            "experience": "1yr",
+            "address": [
+                {
+                    "current_address": "Dehradun"
+                }
+            ]
+        },
+        {   "id": 4,
+            "name": "prakash",
+            "role": "Angular_Developer",
+            "email": "adam.carter@unilogic.com",
+            "experience": "3yr",
+            "address": [
+                {
+                    "current_address": "Dehradun"
+                }
+            ]
+        },
+        {   "id": 5,
+            "name": "Rakesh",
+            "role": "React_Developer",
+            "email": "adam.carter@unilogic.com",
+            "experience": "6yr",
+            "address": [
+                {
+                    "current_address": "Dehradun"
+                }
+            ]
+        }
+    ],
+    "comments": [
+      { "id": 1, "body": "some comment", "postId": 1 }
+    ]
+   
+  }
