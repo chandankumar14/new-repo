@@ -6,6 +6,7 @@ import { TemplateDrivenFormComponent } from './Angular_Form/Form_Component/templ
 import { FromAndMapComponent } from './Rxjs/Rxjs_Operators/from-and-map/from-and-map.component';
 import { ListComponent } from './Rxjs/Rxjs_Operators/list/list.component';
 import { OFOperatorsComponent } from './Rxjs/Rxjs_Operators/of-operators/of-operators.component';
+import { UIDesignComponent } from './ui-design/ui-design.component';
 
 const routes: Routes = [
   {
@@ -15,6 +16,7 @@ const routes: Routes = [
       { path: "Template_drive_form", component: TemplateDrivenFormComponent },
     ]
   },
+  {path:"UI_design",component:UIDesignComponent},
   {
     path: "Rxjs_Obseravale", children: [
       { path: "", component: ListComponent },

@@ -18,6 +18,8 @@ export class OFOperatorsComponent implements OnInit {
     { name: "prakash", role: "Angular_Developer", experience: "3yr" },
     { name: "Rakesh", role: "React_Developer", experience: "6yr" }
   ]
+
+  
   constructor(private _rxjsService:RxjsService) { }
 
   ngOnInit(): void {

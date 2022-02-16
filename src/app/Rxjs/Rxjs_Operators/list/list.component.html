@@ -1,6 +1,10 @@
-<section>
-    <div>
-     <button mat-button color="warn" routerLink ="from_map">From_and_map_Opearators</button>
-     <button mat-button color="warn" routerLink ="Of_operators">Of_Opearators</button>
-      </div>
-  </section>
+
+  <mat-tab-group mat-align-tabs="start">
+    <mat-tab label="from-and-map">
+      <app-from-and-map></app-from-and-map>
+    </mat-tab>
+    <mat-tab label="Of_Operators">
+      <app-of-operators></app-of-operators>
+    </mat-tab>
+   
+  </mat-tab-group>
