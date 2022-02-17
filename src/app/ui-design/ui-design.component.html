@@ -11,7 +11,8 @@
                 *ngFor="let photo of photos.controls; let i = index;">
                 <div class="card mb-3" [formGroupName]="i">
                     <button type="button" (click)="removePhoto(i)" class="btn btn-danger remove-btn">x</button>
-                    <img [src]="photo.controls.fileUrl.value" class="card-img-top" alt="Image Preview">
+                    <img *ngIf="photo" [src]="photo?.get('fileUrl')?.value"  class="card-img-top" alt="Image Preview">
+                   
                     <input type="text" formControlName="fileDescription">
                 </div>
             </div>

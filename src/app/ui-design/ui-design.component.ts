@@ -40,7 +40,7 @@ export class UIDesignComponent implements OnInit {
         reader.readAsDataURL(file);
       }
     }
-    console.log(this.demoForm)
+    console.log(this.photos)
   }
 
   removePhoto(i:number) {
@@ -48,5 +48,8 @@ export class UIDesignComponent implements OnInit {
   }
   Submit(){
     console.log(this.demoForm.value)
+  }
+  xyz(photo:any){
+    console.log(photo.controls.fileUrl.value)
   }
 }
