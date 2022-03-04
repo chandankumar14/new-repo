@@ -11,3 +11,7 @@ export interface student_Model {
     ]
 
 }
+
+export interface Time {
+    remainingTime:number
+}

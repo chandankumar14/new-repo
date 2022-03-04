@@ -1,0 +1,8 @@
+1. Create a form with required field validation
+2. Form controls: Doctor Name(String), Specialities(Array of Strings)
+3. Api Name:  https://dev-api.youthresourceapp.com/addDoctorSpecialities 
+4. Payload: {
+		doctorName: 'satnam'
+		speciality: ['neurosurgeon']
+	}
+   5. If success came then. Show an alert saying ‘Doctor Details Added Successfully’
