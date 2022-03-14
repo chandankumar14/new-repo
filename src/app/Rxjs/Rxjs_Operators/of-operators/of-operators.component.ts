@@ -14,6 +14,7 @@ export class OFOperatorsComponent implements OnInit, OnDestroy {
   
 
   counter: number = 0;
+  timer:number=0
   time: number = 20;
   subject: number = 0;
   constructor(private _rxjsService: RxjsService) {
@@ -30,6 +31,11 @@ export class OFOperatorsComponent implements OnInit, OnDestroy {
     },1000)
   }
 
+  timerfun(){
+    setInterval(()=>{
+      this.timer = this.timer+1
+    },1000)
+  }
   ngOnDestroy(): void {
     let updatedTime =  Math.floor(this.time*60 -this.counter)
     this._rxjsService.time.next(Math.floor(updatedTime/60));
